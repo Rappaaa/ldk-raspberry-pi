@@ -19,7 +19,7 @@ func file::init_file
 	
 	while !input.eof() then
 		def i = i+1
-		cpp input.get(char);
+		cpp input.get(temp);
 	end
 	def length = i
 	
