@@ -19,7 +19,7 @@ void file::init_file() {
 	char temp;
 	while ( !input.eof() ) {
 		i = i+1;
-		temp = input.get(temp);
+		input.get(temp);
 	}
 	length = i;
 	input.close();
