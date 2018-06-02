@@ -15,8 +15,11 @@ func file::init_file
 	var i : unsigned int
 	def i = 0
 	
+	var temp : char
+	
 	while !input.eof() then
 		def i = i+1
+		cpp input.get(char);
 	end
 	def length = i
 	
@@ -34,5 +37,5 @@ func file::init_file
 
 	call in.close
 	
-	cpp cout << "File successfully readed" << endl;
+	cpp cout << "[INFO] File has been init" << endl;
 end
