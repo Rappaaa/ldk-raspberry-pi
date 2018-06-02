@@ -1,0 +1,38 @@
+; Class file.lts
+; (c) Copyright Litikz 2018
+; 02.06.18
+
+cpp #include <fstream>
+
+var file_bytes : char*
+var path : const char*
+var length : unsigned int
+
+func file::init_file
+
+	cpp ifstream input(path);
+
+	var i : unsigned int
+	def i = 0
+	
+	while !input.eof() then
+		def i = i+1
+	end
+	def length = i
+	
+	call input.close
+
+	def file_bytes = new char[length]
+
+	cpp ifstream in(path);
+	def i = 0
+
+	while !in.eof() then
+		cpp in.get(file_bytes[i]);
+		def i = i + 1
+	end
+
+	call in.close
+	
+	cpp cout << "File successfully readed" << endl;
+end
