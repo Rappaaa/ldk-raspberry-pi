@@ -16,8 +16,10 @@ void file::init_file() {
 	ifstream input(path);
 	unsigned int i;
 	i = 0;
+	char temp;
 	while ( !input.eof() ) {
 		i = i+1;
+		temp = input.get(temp);
 	}
 	length = i;
 	input.close();
@@ -26,9 +28,8 @@ void file::init_file() {
 	i = 0;
 	while ( !in.eof() ) {
 		in.get(file_bytes[i]);
-		cout << file_bytes[i];
 		i = i + 1;
 	}
 	in.close();
-	cout << "File successfully readed" << endl;
+	cout << "[INFO] File has been init" << endl;
 }
