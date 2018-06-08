@@ -1,0 +1,17 @@
+; Console class
+; LDK-Raspberry Pi is a free developpement kit for Linit developpers
+; Source code is avaible at github/Rappaaa
+; LDK also can be use for C++ more informations at
+; https://github.com/Rappaaa/ldk-raspberry-pi/cpp/README.txt
+; (c) Copyright - Rappaaa 2018 France
+; Last edit 08/06/2018
+
+var println_arg : const char*
+func console::println
+	cpp cout << println_arg << endl;
+end
+
+var print_arg : const char*
+func console::print
+	cpp cout << print_arg;
+end
